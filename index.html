@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到幸的网站</title>
+    <style type="text/css">
+		/* 将图片的宽度设置为100%以适应父容器 */
+		section article img {
+			width: 100%;
+		}
+		/* 鼠标移动到文章上时，设置图片的缩放比例为1.2 */
+		section article:hover img {
+			transform: scale(1.2);
+			transition: transform 0.5s; /* 添加过渡效果 */
+		}
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav {
+            background-color: #4d4d4d;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #ddd;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        article {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        article img {
+            width: 100%;
+            height: auto;
+        }
+        article h2 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }.circle-container {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.rotating-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+    <audio id="audio" src="E:\系统镜像\html007\html666\images\活泼的欢快灵动广告广告背景配乐_爱给网_aigei_com.mp3"></audio>
+</head>
+<body>
+    <header>
+        <h1>听枫细雪的介绍</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://space.bilibili.com/474163546?spm_id_from=333.337.0.0">哔哩哔哩主页</a></li>
+            <li><a href="https://space.bilibili.com/474163546?spm_id_from=333.337.0.0">个人</a></li>
+            <li><a href="https://space.bilibili.com/474163546?spm_id_from=333.337.0.0">关于我</a></li>
+            <li><a href="https://wx.mail.qq.com/?cancel_login=true&from=get_ticket_fail">联系我</a></li>
+		</u1>
+    </nav>
+    <section>
+        <article>
+            <img src="E:\系统镜像\html007\html666\images\book1.jpg" alt="图片1">
+            <h2>标题1</h2>                                                                                           
+            <p>这里是文章1的内容。</p>
+        </article>
+        <article>
+            <img src="E:\系统镜像\html007\html666\images\book2.jpg" alt="图片2">
+            <h2>标题2</h2>
+            <p>这里是文章2的内容。</p>
+        </article>
+        <article>
+            <img src="E:\系统镜像\html007\html666\images\book3.jpg" alt="图片3">
+            <h2>标题3</h2>
+            <p>这里是文章3的内容。</p>
+        </article>
+        <script>
+            // 获取所有<article>元素
+            const articles = document.querySelectorAll('article');
+        
+            // 定义点击计数器变量
+            let clickCount = 0;
+        
+            // 获取音频元素
+            const audio = document.getElementById('audio');
+        
+            // 为每个<article>元素添加点击事件监听器
+            articles.forEach((article) => {
+              article.addEventListener('click', () => {
+                // 更新计数器
+                clickCount++;
+                
+                // 更新页面上的计数器显示
+                const counter = document.querySelector('p');
+                counter.textContent = `点击次数：${clickCount}`;
+                
+                // 播放音频
+                audio.currentTime = 0;
+                audio.play();
+              });
+            });
+          </script>
+          <div class="circle-container">
+            <img class="rotating-circle" src="E:\系统镜像\html007\html666\images\头像.jpg" alt="Rotating Circle Image">
+          </div>
+          
+    </section>
+ <footer>
+  <p>版权所有 幸© 2023 My Website</p>
+  <nav>
+    <ul>
+      <li><a href="#">关于我们</a></li>
+      <li><a href="#">联系我们</a></li>
+      <li><a href="#">隐私政策</a></li>
+      <li><a href="#">服务条款</a></li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html>
